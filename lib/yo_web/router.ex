@@ -16,6 +16,8 @@ defmodule YoWeb.Router do
   scope "/", YoWeb do
     pipe_through :browser
 
+    resources "/posts", PostController
+
     get "/", PageController, :index
   end
 
