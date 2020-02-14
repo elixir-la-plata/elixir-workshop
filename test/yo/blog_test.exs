@@ -26,7 +26,11 @@ defmodule Yo.BlogTest do
 
     test "get_post!/1 returns the post with given id" do
       post = post_fixture()
-      assert Blog.get_post!(post.id) == post
+      fetched_post = Blog.get_post!(post.id)
+
+      assert fetched_post.title == post.title
+      assert fetched_post.body == post.body
+      assert fetched_post.comments == []
     end
 
     test "create_post/1 with valid data creates a post" do
@@ -49,7 +53,12 @@ defmodule Yo.BlogTest do
     test "update_post/2 with invalid data returns error changeset" do
       post = post_fixture()
       assert {:error, %Ecto.Changeset{}} = Blog.update_post(post, @invalid_attrs)
-      assert post == Blog.get_post!(post.id)
+
+      fetched_post = Blog.get_post!(post.id)
+
+      assert fetched_post.title == post.title
+      assert fetched_post.body == post.body
+      assert fetched_post.comments == []
     end
 
     test "delete_post/1 deletes the post" do

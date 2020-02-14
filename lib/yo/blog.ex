@@ -7,6 +7,7 @@ defmodule Yo.Blog do
   alias Yo.Repo
 
   alias Yo.Blog.Post
+  alias Yo.Blog.Comment
 
   @doc """
   Returns the list of posts.
@@ -35,7 +36,17 @@ defmodule Yo.Blog do
       ** (Ecto.NoResultsError)
 
   """
-  def get_post!(id), do: Repo.get!(Post, id)
+
+  # def get_post!(id), do: Repo.get!(Post, id)
+
+  def get_post!(id) do
+    Repo.one!(
+      from p in Post,
+        where: p.id == ^id,
+        left_join: c in assoc(p, :comments),
+        preload: [comments: c]
+    )
+  end
 
   @doc """
   Creates a post.
@@ -100,5 +111,23 @@ defmodule Yo.Blog do
   """
   def change_post(%Post{} = post) do
     Post.changeset(post, %{})
+  end
+
+  @doc """
+  Creates a comment.
+
+  ## Examples
+
+      iex> create_comment(%{field: value})
+      {:ok, %Comment{}}
+
+      iex> create_comment(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_comment(attrs) do
+    %Comment{}
+    |> Comment.changeset(attrs)
+    |> Repo.insert()
   end
 end

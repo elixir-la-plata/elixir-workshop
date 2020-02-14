@@ -6,6 +6,8 @@ defmodule Yo.Blog.Post do
     field :body, :string
     field :title, :string
 
+    has_many :comments, Yo.Blog.Comment
+
     timestamps()
   end
 
@@ -14,5 +16,6 @@ defmodule Yo.Blog.Post do
     post
     |> cast(attrs, [:title, :body])
     |> validate_required([:title, :body])
+    |> unique_constraint(:title)
   end
 end
