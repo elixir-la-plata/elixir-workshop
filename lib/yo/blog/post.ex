@@ -6,7 +6,7 @@ defmodule Yo.Blog.Post do
     field :body, :string
     field :title, :string
 
-    has_many :comments, Yo.Blog.Comment
+    has_many :comments, Yo.Blog.Comment, on_delete: :delete_all
 
     timestamps()
   end
