@@ -1,0 +1,16 @@
+.nav-link {
+  display: block;
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 1rem 2rem;
+
+  color: var(--base-color);
+  background-color: var(--blue);
+  border: 2px solid var(--base-color);
+}
+
+.nav-link:hover {
+  color: var(--base-color);
+  background-color: var(--dark-blue);
+  border-color: var(--silver);
+}

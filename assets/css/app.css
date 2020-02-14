@@ -1,3 +1,18 @@
 /* This file is for your main application css. */
 
-@import "./phoenix.css";
+@import "./base/base.css";
+@import "./base/color.css";
+@import "./base/normalize.css";
+@import "./base/spacing.css";
+@import "./base/typography.css";
+
+@import "./layout/site-header.css";
+@import "./layout/site-main.css";
+
+@import "./component/alert.css";
+@import "./component/button.css";
+@import "./component/divider.css";
+@import "./component/form.css";
+@import "./component/image.css";
+@import "./component/nav-link.css";
+@import "./component/table.css";

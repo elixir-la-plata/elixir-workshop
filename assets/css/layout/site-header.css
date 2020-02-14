@@ -1,0 +1,24 @@
+.site-header {
+  max-width: 40em;
+
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-link {
+  color: var(--blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header-link:hover {
+  color: var(--dark-blue);
+}

@@ -1,0 +1,27 @@
+:root {
+  --blue: rgba(0, 126, 204, 1);
+  --red: rgba(240, 58, 71, 1);
+  --gold: rgba(250, 188, 60, 1);
+  --green: rgba(110, 235, 131, 1);
+  
+  --transparent-gold: rgba(250, 188, 60, 0.8);
+  --transparent-green: rgba(110, 235, 131, 0.8);
+  
+  --dark-blue: rgba(0, 92, 149, 1);
+  --dark-red: rgba(175, 43, 52, 1);
+  --dark-gold: rgba(182, 137, 44, 1);
+  --dark-green: rgba(81, 171, 96, 1);
+  
+  /** Gray shadows **/
+  --cotton: #f4f4f4;
+  --clouds: #ecf0f1;
+  --silver: #bdc3c7;
+  --concrete: #95a5a6;
+  --asbestos: #7f8c8d;
+  
+  --brand-color: var(--blue);
+  --emphasized-brand-color: var(--dark-blue);
+  
+  --text-color: #000;
+  --base-color: #fff;
+}

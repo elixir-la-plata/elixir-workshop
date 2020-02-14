@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+  padding: 0 3rem;
+  color: var(--base-color);
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 3.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.8rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:focus {
+  color: var(--base-color);
+}
+
+.button:hover {
+  color: var(--base-color);
+  outline: 0;
+}
+
+.button[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.submit-button {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+
+.submit-button:hover {
+  background-color: var(--emphasized-brand-color);
+  border-color: var(--emphasized-brand-color);
+}

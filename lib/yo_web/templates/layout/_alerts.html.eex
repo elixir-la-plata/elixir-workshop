@@ -1,0 +1,13 @@
+<%= if get_flash(@conn, :info) do %>
+  <article class="alert alert-info closable-js" role="alert">
+    <%= get_flash(@conn, :info) %>
+    <span class="close close-js">&times;</span>
+  </article>
+<% end %>
+
+<%= if get_flash(@conn, :error) do %>
+  <article class="alert alert-error closable-js" role="alert">
+    <%= get_flash(@conn, :error) %>
+    <span class="close close-js">&times;</span>
+  </article>
+<% end %>
