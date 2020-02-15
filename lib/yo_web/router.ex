@@ -21,8 +21,8 @@ defmodule YoWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", YoWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", YoWeb.Api do
+    pipe_through :api
+    resources "/posts", PostController, only: [:show, :index]
+  end
 end
