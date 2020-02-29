@@ -1,35 +1,74 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
-</section>
+<h1><%= gettext "Welcome to %{name}!", name: "Yo" %></h1>
+<p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-    </ul>
-  </article>
-</section>
+
+<button class="button submit-button">Submit</button>
+
+<button class="button">No style</button>
+
+<button class="button danger-button">Danger</button>
+
+<h2>Forms</h2>
+
+<fieldset class="group">
+  <legend>Radio Buttons</legend>
+  <label class="radio-label">
+    <input type="radio" name="label" value="1">
+    Label1
+  </label>
+
+  <label class="radio-label">
+    <input type="radio" name="label" value="2">
+    Label2
+  </label>
+
+  <label class="radio-label">
+    <input type="radio" name="label" value="3">
+    Label3
+  </label>
+</fieldset>
+
+<fieldset class="group">
+  <legend>Checkboxes</legend>
+  <label class="radio-label">
+    <input type="checkbox" name="checkbox" value="1">
+    Label1
+  </label>
+
+  <label class="radio-label">
+    <input type="checkbox" name="checkbox" value="2">
+    Label2
+  </label>
+
+  <label class="radio-label">
+    <input type="checkbox" name="checkbox" value="3">
+    Label3
+  </label>
+</fieldset>
+
+<label for="file">File</label>
+
+<input type="file" id="file" name="file" class="file-input">
+
+
+<h2>Lists</h2>
+
+<p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
+<ul>
+  <li>Hello world</li>
+  <li>Hello world</li>
+  <li>Hello world</li>
+  <li>Hello world</li>
+  <li>Hello world</li>
+</ul>
+
+<h3>Sub subtitle</h3>
+
+<p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
+<ol>
+  <li>Hello world</li>
+  <li>Hello world</li>
+  <li>Hello world</li>
+  <li>Hello world</li>
+  <li>Hello world</li>
+</ol>
