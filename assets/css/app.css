@@ -4,7 +4,7 @@
 
 @import "./base/base.css";
 @import "./base/color.css";
-@import "./base/input.css";
+@import "./base/form.css";
 @import "./base/link.css";
 @import "./base/list.css";
 @import "./base/typography.css";
@@ -16,5 +16,6 @@
 @import "./component/button.css";
 @import "./component/divider.css";
 @import "./component/image.css";
+@import "./component/input.css";
 @import "./component/nav-link.css";
 @import "./component/table.css";

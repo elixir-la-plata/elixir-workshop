@@ -1,8 +1,8 @@
 a {
-  color: var(--brand-color);
+  color: var(--link-color);
 }
 
 a:focus,
 a:hover {
-  color: var(--emphasized-brand-color);
+  color: var(--dark-link-color);
 }
