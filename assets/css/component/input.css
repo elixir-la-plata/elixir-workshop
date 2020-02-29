@@ -23,9 +23,3 @@
 .file-input:hover {
   border-color: var(--dark-grey);
 }
-
-.checkbox-label input,
-.radio-label input,
-.file-input {
-  margin-bottom: 0;
-}
