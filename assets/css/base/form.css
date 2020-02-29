@@ -9,6 +9,7 @@ legend {
 fieldset {
   border-width: 0;
   padding: 0;
+  margin-bottom: 1.5rem;
 }
 
 input[type='checkbox'],
@@ -27,12 +28,4 @@ select:focus {
 
 textarea {
   min-height: 6.5rem;
-}
-
-fieldset,
-input,
-select,
-textarea,
-form {
-  margin-bottom: 1.5rem;
 }

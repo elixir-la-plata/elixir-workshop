@@ -1,21 +1,19 @@
 /* This file is for your main application css. */
 
-@import "./base/normalize.css";
+@import "./base/_normalize.css";
 
 @import "./base/base.css";
 @import "./base/color.css";
 @import "./base/form.css";
+@import "./base/headings.css";
+@import "./base/image.css";
 @import "./base/link.css";
-@import "./base/list.css";
-@import "./base/typography.css";
 
 @import "./layout/site-header.css";
 @import "./layout/site-main.css";
 
 @import "./component/alert.css";
 @import "./component/button.css";
-@import "./component/divider.css";
-@import "./component/image.css";
 @import "./component/input.css";
 @import "./component/nav-link.css";
 @import "./component/table.css";

@@ -9,4 +9,21 @@
 /** of sizing rems in a way that is similar to using px: 1.6rem = 16px **/
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/** Default body styles **/
+body {
+  color: var(--text-color);
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+
+  /** Use system fonts. They tend to look nice and are good for performance. **/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+p {
+  margin-top: 0;
 }
