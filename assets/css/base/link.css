@@ -1,0 +1,8 @@
+a {
+  color: var(--brand-color);
+}
+
+a:focus,
+a:hover {
+  color: var(--emphasized-brand-color);
+}

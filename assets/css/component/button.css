@@ -1,42 +1,52 @@
 .button {
   display: inline-block;
-  padding: 0 3rem;
-  color: var(--base-color);
-  border-style: solid;
-  border-width: 0.1rem;
-  border-radius: 0.4rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  height: 3.8rem;
-  letter-spacing: 0.1rem;
+  padding: 0 2rem;
+  letter-spacing: 0.05rem;
   line-height: 3.8rem;
-  text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
-  cursor: pointer;
-}
-
-.button:focus {
-  color: var(--base-color);
+  border: 1px solid var(--asbestos);
+  border-radius: 0.4rem;
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, 0.20));
 }
 
 .button:hover {
-  color: var(--base-color);
-  outline: 0;
+  background-image: linear-gradient(rgba(0,0,0, 0.10), rgba(0,0,0, 0.30));
+}
+
+.button:active {
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  background-image: linear-gradient(rgba(0,0,0, 0.20), rgba(0,0,0, 0.40));
+  border-color: #000;
 }
 
 .button[disabled] {
-  cursor: default;
   opacity: 0.5;
 }
 
 .submit-button {
+  color: var(--base-color);
   background-color: var(--brand-color);
-  border-color: var(--brand-color);
 }
 
 .submit-button:hover {
-  background-color: var(--emphasized-brand-color);
-  border-color: var(--emphasized-brand-color);
+  color: var(--base-color);
+}
+
+.cancel-button {
+  color: var(--base-color);
+  background-color: var(--red);
+}
+
+.cancel-button:hover {
+  color: var(--base-color);
+}
+
+.warning-button {
+  color: var(--base-color);
+  background-color: var(--gold);
+}
+
+.warning-button:hover {
+  color: var(--base-color);
 }
