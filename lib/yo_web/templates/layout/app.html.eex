@@ -10,6 +10,7 @@
   <body class="body">
     <header class="site-header">
       <%= link "Home", to: Routes.page_path(@conn, :index), class: "header-link" %>
+      Views: <%= @conn.assigns.counter %>
       <%= link "Posts", to: Routes.post_path(@conn, :index), class: "header-link" %>
     </header>
     <main role="main" class="site-main">

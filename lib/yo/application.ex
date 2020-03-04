@@ -11,7 +11,8 @@ defmodule Yo.Application do
       # Start the Ecto repository
       Yo.Repo,
       # Start the endpoint when the application starts
-      YoWeb.Endpoint
+      YoWeb.Endpoint,
+      {Yo.Blog.Counter, name: :counter}
       # Starts a worker by calling: Yo.Worker.start_link(arg)
       # {Yo.Worker, arg},
     ]

@@ -130,4 +130,14 @@ defmodule Yo.Blog do
     |> Comment.changeset(attrs)
     |> Repo.insert()
   end
+
+  alias Yo.Blog.Counter
+
+  def get_counter() do
+    Counter.get(:counter)
+  end
+
+  def increment_counter() do
+    Counter.inc(:counter)
+  end
 end
