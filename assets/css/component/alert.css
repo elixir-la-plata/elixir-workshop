@@ -17,7 +17,7 @@
   cursor: default;
 }
 
-.alert-danger {
+.alert-error {
   background-color: var(--transparent-gold);
 }
 

@@ -10,9 +10,10 @@
 
 <%= form_for @changeset, Routes.post_path(@conn, :add_comment, @post), fn f -> %>
   <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
-    </div>
+    <article class="alert alert-error closable-js" role="alert">
+      Oops, something went wrong! Please check the errors below.
+      <span class="close close-js">&times;</span>
+    </article>
   <% end %>
 
   <%= label f, :body %>
