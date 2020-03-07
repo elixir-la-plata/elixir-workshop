@@ -1,7 +1,6 @@
 <%= link "Back", to: Routes.post_path(@conn, :index) %>
 
 <h1>Show Post</h1>
-
 <ul>
 
   <li>
@@ -17,6 +16,24 @@
 </ul>
 
 <h2>Comments</h2>
+
+<%= form_for @changeset, Routes.post_path(@conn, :add_comment, @post), fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :body %>
+  <%= text_input f, :body, class: "input" %>
+  <%= error_tag f, :body %>
+
+  <div>
+    <%= submit "Save", class: "button submit-button" %>
+  </div>
+<% end %>
+
+
 <ul>
   <%=  for comment <- @post.comments do %>
     <li><%= comment.body %></li>

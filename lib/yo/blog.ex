@@ -131,6 +131,10 @@ defmodule Yo.Blog do
     |> Repo.insert()
   end
 
+  def change_comment(%Comment{} = comment) do
+    Comment.changeset(comment, %{})
+  end
+
   alias Yo.Blog.Counter
 
   def get_counter() do

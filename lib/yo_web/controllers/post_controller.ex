@@ -28,7 +28,9 @@ defmodule YoWeb.PostController do
 
   def show(conn, %{"id" => id}) do
     post = Blog.get_post!(id)
-    render(conn, "show.html", post: post)
+    changeset = Blog.change_comment(%Yo.Blog.Comment{})
+
+    render(conn, "show.html", post: post, changeset: changeset)
   end
 
   def edit(conn, %{"id" => id}) do
@@ -48,6 +50,19 @@ defmodule YoWeb.PostController do
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", post: post, changeset: changeset)
+    end
+  end
+
+  def add_comment(conn, %{"post_id" => post_id, "comment" => comment_params}) do
+    case Blog.create_comment(Map.put(comment_params, "post_id", post_id)) do
+      {:ok, _comment} ->
+        conn
+        |> put_flash(:info, "Comment created successfully.")
+        |> redirect(to: Routes.post_path(conn, :show, post_id))
+
+      {:error, %Ecto.Changeset{} = changeset} ->
+        post = Blog.get_post!(post_id)
+        render(conn, "show.html", changeset: changeset, post: post)
     end
   end
 

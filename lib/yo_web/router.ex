@@ -18,6 +18,7 @@ defmodule YoWeb.Router do
     pipe_through :browser
 
     resources "/posts", PostController
+    post "/posts/:post_id/add_comment", PostController, :add_comment
 
     get "/", PageController, :index
   end
