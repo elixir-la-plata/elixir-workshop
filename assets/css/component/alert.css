@@ -9,13 +9,13 @@
 }
 
 .alert .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0rem 1rem;
-    font-size: 2rem;
-    cursor: default;
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0rem 1rem;
+  font-size: 2rem;
+  cursor: default;
+}
 
 .alert-danger {
   background-color: var(--transparent-gold);
