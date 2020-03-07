@@ -11,6 +11,7 @@
 
 @import "./layout/site-header.css";
 @import "./layout/site-main.css";
+@import "./layout/admin.css";
 
 @import "./component/alert.css";
 @import "./component/button.css";

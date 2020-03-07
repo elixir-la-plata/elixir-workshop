@@ -10,6 +10,10 @@ defmodule YoWeb.Router do
     plug YoWeb.Plugs.Count
   end
 
+  pipeline :admin do
+    plug :put_layout, {YoWeb.LayoutView, "admin.html"}
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -24,7 +28,7 @@ defmodule YoWeb.Router do
   end
 
   scope "/admin", YoWeb.Admin, as: :admin do
-    pipe_through :browser
+    pipe_through [:browser, :admin]
     resources "/posts", PostController
   end
 

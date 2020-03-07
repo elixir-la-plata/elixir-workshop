@@ -2,9 +2,13 @@
 
 <h1><%= @post.title %></h1>
 
-<pre>
+<pre class="markdown">
 <%= @post.body %>
 </pre>
+
+<%= if Enum.any?(@post.comments) do %>
+
+<hr/>
 
 <h2>Comments</h2>
 
@@ -13,5 +17,6 @@
     <li><%= comment.body %></li>
   <% end %>
 </ul>
+<% end %>
 
-<span><%= link "Edit", to: Routes.admin_post_path(@conn, :edit, @post) %></span>
+<%= link "Edit", to: Routes.admin_post_path(@conn, :edit, @post) %>
