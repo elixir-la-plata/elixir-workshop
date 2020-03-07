@@ -2,7 +2,7 @@
 
 <h1><%= @post.title %></h1>
 
-<%= @post.body %>
+<%= raw Earmark.as_html!(@post.body) %>
 
 <hr />
 
@@ -24,6 +24,7 @@
   </div>
 <% end %>
 
+<h2>Comments</h2>
 <ul>
   <%=  for comment <- @post.comments do %>
     <li><%= comment.body %></li>
