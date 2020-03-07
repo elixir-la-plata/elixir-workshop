@@ -13,24 +13,24 @@ jobs:
       db:
         image: postgres:11
         ports: ['5432:5432']
-        options:
-          - health-cmd pg_isready
-          - health-interval 10s
-          - health-timeout 5s
-          - health-retries 5
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v1.0.0
+        uses: actions/checkout@v2
 
       - name: "Setup Elixir"
-        uses: actions/setup-elixir@v1.0.0
+        uses: actions/setup-elixir@v1
         with:
           otp-version: 22.x
           elixir-version: 1.10.x
 
       - name: "Get Dependencies"
-        run: mix deps.get
+        run: "mix deps.get"
 
       - name: "Run Tests"
-        run: mix test
+        run: "mix test"
