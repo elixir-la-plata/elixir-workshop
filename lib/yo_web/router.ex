@@ -17,10 +17,15 @@ defmodule YoWeb.Router do
   scope "/", YoWeb do
     pipe_through :browser
 
-    resources "/posts", PostController
+    resources "/posts", PostController, only: [:show]
     post "/posts/:post_id/add_comment", PostController, :add_comment
 
-    get "/", PageController, :index
+    get "/", PostController, :index
+  end
+
+  scope "/admin", YoWeb.Admin, as: :admin do
+    pipe_through :browser
+    resources "/posts", PostController
   end
 
   scope "/api", YoWeb.Api do

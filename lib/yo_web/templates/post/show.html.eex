@@ -1,21 +1,12 @@
 <%= link "Back", to: Routes.post_path(@conn, :index) %>
 
-<h1>Show Post</h1>
-<ul>
+<h1><%= @post.title %></h1>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @post.title %>
-  </li>
+<%= @post.body %>
 
-  <li>
-    <strong>Body:</strong>
-    <%= @post.body %>
-  </li>
+<hr />
 
-</ul>
-
-<h2>Comments</h2>
+<h2>Add comment</h2>
 
 <%= form_for @changeset, Routes.post_path(@conn, :add_comment, @post), fn f -> %>
   <%= if @changeset.action do %>
@@ -33,11 +24,8 @@
   </div>
 <% end %>
 
-
 <ul>
   <%=  for comment <- @post.comments do %>
     <li><%= comment.body %></li>
   <% end %>
 </ul>
-
-<span><%= link "Edit", to: Routes.post_path(@conn, :edit, @post) %></span>
