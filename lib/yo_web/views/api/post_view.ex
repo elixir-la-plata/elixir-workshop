@@ -1,4 +1,5 @@
 defmodule YoWeb.Api.PostView do
+  @moduledoc false
   use YoWeb, :view
 
   def render("index.json", %{posts: posts}) do

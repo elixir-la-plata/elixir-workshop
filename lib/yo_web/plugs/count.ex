@@ -1,4 +1,6 @@
 defmodule YoWeb.Plugs.Count do
+  @moduledoc false
+
   import Plug.Conn
   alias Yo.Blog
 

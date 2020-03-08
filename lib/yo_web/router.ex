@@ -1,4 +1,6 @@
 defmodule YoWeb.Router do
+  @moduledoc false
+
   use YoWeb, :router
 
   pipeline :browser do
