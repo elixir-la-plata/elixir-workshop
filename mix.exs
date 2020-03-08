@@ -10,7 +10,8 @@ defmodule Yo.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -43,7 +44,15 @@ defmodule Yo.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:earmark, "~> 1.4"}
+      {:earmark, "~> 1.4"},
+      {:ex_doc, "~> 0.21", only: :dev}
+    ]
+  end
+
+  defp docs do
+    [
+      source_url: "https://github.com/nicanor/elixir-workshop",
+      extras: ["README.md"]
     ]
   end
 
