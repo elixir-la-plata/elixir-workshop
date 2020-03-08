@@ -45,6 +45,6 @@ jobs:
           ACTION_MAIL: nicanorperera@gmail.com
           ACTION_NAME: nicanor
           GH_PAT: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
-          MD_FOLDER: doc
+          MD_FOLDER: "priv/pages"
           OWNER: nicanor
           REPO_NAME: elixir-workshop
