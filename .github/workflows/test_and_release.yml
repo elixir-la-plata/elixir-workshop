@@ -38,3 +38,13 @@ jobs:
 
       - name: "Run Tests"
         run: "mix test"
+
+      - name: "Upload Release Notes to Wiki"
+        uses: docker://decathlon/wiki-page-creator-action:latest
+        env:
+          ACTION_MAIL: nicanorperera@gmail.com
+          ACTION_NAME: nicanor
+          GH_PAT: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+          MD_FOLDER: doc
+          OWNER: nicanor
+          REPO_NAME: elixir-workshop
