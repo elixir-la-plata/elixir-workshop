@@ -51,8 +51,27 @@ defmodule Yo.MixProject do
 
   defp docs do
     [
+      app: "Elixir Workshop",
+      name: "Elixir Workshop",
+      api_reference: false,
+      main: "readme",
       source_url: "https://github.com/nicanor/elixir-workshop",
-      extras: ["README.md"]
+      groups_for_modules: [
+        Blog: ~r/Yo.Blog/,
+        Routes: ["YoWeb.Router.Helpers"],
+        Controllers: ~r/Controller/,
+        Plugs: ~r/Plug/,
+        Others: ["Yo", "Yo.Repo", "YoWeb", "YoWeb.Endpoint", "YoWeb.Gettext"]
+      ],
+      extras: [
+        "README.md": [title: "Welcome"],
+        "priv/pages/introduction/contributing.md": [title: "Contributing"],
+        "priv/pages/introduction/style_guide.md": [title: "Style Guide"]
+      ],
+      groups_for_extras: [
+        Introduction: ["README.md"],
+        Introduction: Path.wildcard("priv/pages/introduction/*.md")
+      ]
     ]
   end
 
