@@ -39,12 +39,17 @@ jobs:
       - name: "Run Tests"
         run: "mix test"
 
-      - name: "Upload Release Notes to Wiki"
-        uses: docker://decathlon/wiki-page-creator-action:latest
-        env:
-          ACTION_MAIL: nicanorperera@gmail.com
-          ACTION_NAME: nicanor
-          GH_PAT: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
-          MD_FOLDER: "priv/pages"
-          OWNER: elixir-la-plata
-          REPO_NAME: elixir-workshop
+#  update_wiki:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: "Upload Release Notes to Wiki"
+#        uses: docker://decathlon/wiki-page-creator-action:latest
+#        env:
+#          ACTION_MAIL: nicanorperera@gmail.com
+#          ACTION_NAME: nicanor
+#          GH_PAT: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+#          MD_FOLDER: "priv/pages"
+#          OWNER: elixir-la-plata
+#          REPO_NAME: elixir-workshop
+#
